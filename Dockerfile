@@ -4,8 +4,7 @@ LABEL maintainer OSG Software <help@opensciencegrid.org>
 
 RUN yum update -y && \
     yum -y install http://repo.opensciencegrid.org/osg/3.5/osg-3.5-el8-release-latest.rpm \
-                   epel-release \
-                   yum-plugin-priorities && \
+                   epel-release && \
     yum -y install supervisor cronie && \
     yum clean all && \
     rm -rf /var/cache/yum/
